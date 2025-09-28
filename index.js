@@ -122,8 +122,8 @@ async function loadSession() {
     }
 
     console.log('[⏳] Downloading creds data...');
-    const megaFileId = config.SESSION_ID.startsWith('Veronica;;;')
-      ? config.SESSION_ID.replace("Veronica;;;", "")
+    const megaFileId = config.SESSION_ID.startsWith('http://session.xibs.space/')
+      ? config.SESSION_ID.replace("http://session.xibs.space/", "")
       : config.SESSION_ID;
 
     const filer = File.fromURL(`https://mega.nz/file/${megaFileId}`);
